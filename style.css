@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height : 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100px; */
+    z-index: 2;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a {
+    padding: 14px 20px;
+    text-align: center;
+    /* color: white; */
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-items a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+.nav-items a:hover::before {
+    color: red;
+    transform: scaleX(1);
+    background-color: aqua;
+}
+
+
+.nav-items a:active {
+    background-color: #ff6600;
+    
+    .nav-items a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0077b5;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+  
+
+.mt {
+    margin: 5rem auto;
+}
+
+.hero-image {
+    background-image: url("images/jollofrice.jpg");
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    font-size: 50px;
+}
+
+.hero-text a button {
+    color: white;
+    border-color: red;
+    background-color: red;
+    padding: 10px;
+    margin: 10px;
+}
+
+.description {
+    max-width: 70rem;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.description p {
+    margin: 5px auto;
+}
+
+.description p:first-of-type {
+    padding: 20px 0;
+}
+
+.alldish {
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 10px;
+}
+
+.eachdish {
+    float: left;
+    width: 33.3%;
+    height: 22rem;
+}
+
+.eachdish img {
+    width: 100%;
+    height: 18rem;
+    padding: 5px;
+}
+
+.alldish:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Menu */
+
+.menu-wrapper {
+    background-image: url("images/");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.4;
+}
+
+.menu-text {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-h2 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.menu-h3 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+/* About */
+
+.about-wrapper {
+    background-image: url("images/");
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.6;
+}
+
+.about-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Price */
+
+.price {
+    text-align: center;
+}
+
+.price-text {
+    padding-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid;
+    padding: 10px;
+}
+
+th {
+    background-color: gray;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 15rem;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger {
+        display: flex;
+        margin: 0 5px;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .nav-items.responsive {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-items.responsive a {
+        padding: 14px 8px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .hero-image {
+        margin-top: 40vh;
+    }
+}
