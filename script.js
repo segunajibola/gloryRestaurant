@@ -11,3 +11,5 @@ function myFunction() {
         x.className = "nav-items";
     }
 }
+
+console.log(new Date().getFullYear())

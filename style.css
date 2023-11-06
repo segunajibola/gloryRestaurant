@@ -50,6 +50,10 @@ nav img {
     transition: background-color 0.3s;
 }
 
+#currentTab {
+    background-color: aqua;
+}
+
 .hamburger {
     display: none;
 }
@@ -75,25 +79,33 @@ nav img {
 
 
 .nav-items a:active {
-    background-color: #ff6600;
+    /* background-color: #ff6600; */
     
-    .nav-items a::after {
+    /* .nav-items a::after {
       content: "";
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: #0077b5;
+      background-color: #2e8fc3;
       z-index: -1;
       opacity: 0;
       transition: opacity 0.3s;
-    }
+    } */
+  }
+
+  .nav-items a .active {
+    background-color: aqua;
   }
   
-
 .mt {
-    margin: 5rem auto;
+    margin: 6rem auto 1rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero-image {
@@ -121,7 +133,7 @@ nav img {
 
 .hero-text a button {
     color: white;
-    border-color: red;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     background-color: red;
     padding: 10px;
     margin: 10px;
@@ -146,24 +158,28 @@ nav img {
     text-align: center;
     padding-bottom: 30px;
     margin: 10px;
+    font-size: 20px;
+}
+
+.alldish a,
+.alldish .menu-dish {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+    text-decoration: none;
 }
 
 .eachdish {
-    float: left;
-    width: 33.3%;
-    height: 22rem;
+    width: 100%;
+    padding: 3px;
 }
 
-.eachdish img {
+.alldish img {
     width: 100%;
     height: 18rem;
-    padding: 5px;
-}
-
-.alldish:after {
-    content: "";
-    display: table;
-    clear: both;
+    padding: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Menu */
@@ -199,7 +215,7 @@ nav img {
 /* About */
 
 .about-wrapper {
-    background-image: url("images/");
+    background-image: url("images/about.jpg");
     height: 90%;
     background-position: center;
     background-repeat: no-repeat;
@@ -223,13 +239,13 @@ nav img {
 }
 
 .price-text {
-    padding-bottom: 10px;
+    padding-bottom: 2rem;
 }
 
 table {
     border-collapse: collapse;
     width: 50%;
-    margin: auto;
+    margin: auto auto 2rem;
 }
 
 th, td {
@@ -249,7 +265,7 @@ th {
 
 form {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 label {
@@ -296,15 +312,12 @@ footer {
     .nav-items.responsive {
         display: flex;
         flex-direction: column;
+        /* margin-bottom: 40vh; */
     }
 
     .nav-items.responsive a {
         padding: 14px 8px;
         width: 100%;
         text-align: left;
-    }
-
-    .hero-image {
-        margin-top: 40vh;
     }
 }
